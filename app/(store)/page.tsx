@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { createAdminClient } from '~/lib/supabase/server'
 import type { Plan, Testimonial, Video } from '~/lib/types'
 import PlanosSection from './PlanosSection'
@@ -26,31 +25,13 @@ export default async function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A0A] via-[#0D1A2E] to-[#0A0A0A]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_60%_50%,rgba(30,144,255,0.08),transparent_70%)]" />
 
-        {/* Logo dark — desktop right side */}
-        <div className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 items-center justify-end pr-8 pointer-events-none select-none">
-          <Image
-            src="/logo_dark.png"
-            alt="Guto Fernandes Endurance Coach"
-            width={420}
-            height={200}
-            className="w-[380px] opacity-[0.07]"
-            priority
-          />
+        {/* Decorative distance */}
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 text-[20rem] font-extrabold text-white/[0.025] leading-none select-none pointer-events-none"
+          style={{ fontFamily: "var(--font-barlow-condensed), sans-serif" }}>
+          42K
         </div>
 
         <div className="relative max-w-6xl mx-auto px-6 py-24 w-full">
-          {/* Logo dark — mobile, above headline */}
-          <div className="flex lg:hidden justify-start mb-8">
-            <Image
-              src="/logo_dark.png"
-              alt="Guto Fernandes Endurance Coach"
-              width={240}
-              height={110}
-              className="w-52 opacity-80"
-              priority
-            />
-          </div>
-
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#1E90FF]/10 border border-[#1E90FF]/20 rounded-full text-[#1E90FF] text-xs font-semibold uppercase tracking-widest mb-8">
               <span className="w-1.5 h-1.5 bg-[#1E90FF] rounded-full animate-pulse" />
@@ -149,24 +130,7 @@ export default async function HomePage() {
       {/* ── FINAL CTA ────────────────────────────── */}
       <section className="py-24 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="bg-gradient-to-br from-[#0D1A2E] to-[#141414] border border-[#1E90FF]/20 rounded-3xl p-12 relative overflow-hidden">
-            {/* Logo watermark */}
-            <div className="absolute -bottom-6 -right-6 pointer-events-none select-none">
-              <Image
-                src="/logo_dark.png"
-                alt=""
-                width={280}
-                height={130}
-                className="w-64 opacity-[0.06]"
-              />
-            </div>
-            <Image
-              src="/logo_dark.png"
-              alt="Guto Fernandes Endurance Coach"
-              width={200}
-              height={92}
-              className="w-44 mx-auto mb-6 opacity-90"
-            />
+          <div className="bg-gradient-to-br from-[#0D1A2E] to-[#141414] border border-[#1E90FF]/20 rounded-3xl p-12">
             <h2 className="text-5xl text-white mb-4">Pronto para correr?</h2>
             <p className="text-[#888888] text-lg mb-8">
               Escolha seu plano, crie sua conta no Training Peaks e comece a treinar ainda esta semana.

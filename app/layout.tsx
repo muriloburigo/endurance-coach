@@ -1,5 +1,20 @@
 import type { Metadata } from 'next'
+import { Barlow, Barlow_Condensed } from 'next/font/google'
 import './globals.css'
+
+const barlow = Barlow({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-barlow',
+  display: 'swap',
+})
+
+const barlowCondensed = Barlow_Condensed({
+  subsets: ['latin'],
+  weight: ['700', '800'],
+  variable: '--font-barlow-condensed',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Guto Fernandes — Endurance Coach | Planilhas de Corrida',
@@ -8,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className={`${barlow.variable} ${barlowCondensed.variable}`}>
       <body>{children}</body>
     </html>
   )
