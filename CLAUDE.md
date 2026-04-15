@@ -1,4 +1,4 @@
-# Personal Coach
+# Endurance Coach
 
 Plataforma de venda de planilhas de treino (Training Peaks) para corrida e triathlon.
 
